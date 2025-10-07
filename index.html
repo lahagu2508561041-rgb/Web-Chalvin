@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Chalvin Marcellius Lahagu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const text = "Halo Saya Chalvin";
+    const element = document.querySelector('#home h2');
+    let index = 0;
+    let isDeleting = false;
+
+    function typeLoop() {
+      if (!isDeleting) {
+        element.textContent = text.substring(0, index + 1);
+        index++;
+        if (index === text.length) {
+          isDeleting = true;
+          setTimeout(typeLoop, 1500); 
+          return;
+        }
+      } else {
+        
+        if (index > 1) {
+          element.textContent = text.substring(0, index - 1);
+          index--;
+        } else {
+          isDeleting = false;
+        }
+      }
+      setTimeout(typeLoop, isDeleting ? 100 : 200);
+    }
+    typeLoop();
+  });
+</script>
+
+  <body>
+    <!--  INI KOMENTAR
+    File ini adalah contoh informasi-informasi yang harus kamu isi dalam website yang akan kamu buat, buatlah sekreatif mungkin sesuai dengan ketentuan panduan. -->
+
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="navbar_container">
+        <h1 class="logo">Chalvin109</h1>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#Creative Collection">Creative Collection</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <!-- hero section -->
+      <section id="home" data-aos="fade-up">
+        <div class="home_content">
+          <div>
+            <h2>Halo Saya Chalvin</h2>
+            <p>Mari Terhubung! Saya siap berkolaborasi dalam proyek inovatif</p>
+            <a href="#about">
+              <button class="btn">About</button>
+            </a>
+          </div>
+          <figure class="home_photo_container">
+            <img
+              class="home_photo"
+              src="assets/images/photo_about.jpg"
+              alt="Foto Saya"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <!-- tentang saya -->
+      <section id="about" 
+        <div class="about_content card-glass" 
+          <figure class="about_photo-container">
+            <img
+              class="photo_about"
+              src="assets/images/photo_home.jpg"
+              alt="Foto Saya"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <div>
+            <p>
+              Halo, saya Chalvin Marcellius Lahagu Mahasiswa aktif Prodi Informatika Universitas Udayana yang menekuni desain dalam berbagai bentuk visual. Saya
+              berfokus pada pengembangan karya yang memadukan seni dengan teknologi.
+            </p>
+            <ul class="about_details">
+              <li>
+                <article>
+                  <p>Tempat, Tanggal Lahir: Trenggalek, 16 Maret 2007</p>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <p>Jenis Kelamin: Laki - Laki</p>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <p>Perguruan Tinggi: Universitas Udayana</p>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <p>Fakultas: Matematika dan Ilmu Pengetahuan Alam</p>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <p>Program Studi: Informatika</p>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <p>Nomor Telepon: 082210064095</p>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <p>Email: chalvin109@gmail.com</p>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <p>Instagram: @chalvin_109</p>
+                </article>
+              </li>
+              <li>
+                <article>
+                  <p>Linkedin: Chalvin Marcellius Lahagu</p>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- pendidikan -->
+      <section id="education" data-aos="fade-up" data-aos-delay="100">
+        <header class="section-header sectionbar">
+          <h2>Riwayat Pendidikan</h2>
+        </header>
+        <ul class="history">
+          <li data-aos="fade-up" data-aos-delay="100">
+            <article class="card-glass">
+              <h4>SD Negeri 075019 Dahana Tabaloho</h4>
+              <time>(2013 - 2019)</time>
+            </article>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="200">
+            <article class="card-glass">
+              <h4>SMP Negeri 1 Kota Gunungsitoli</h4>
+              <time>(2019 - 2022)</time>
+            </article>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="300">
+            <article class="card-glass">
+              <h4>SMA Negeri 3 Gunungsitoli</h4>
+              <time>(2022 - 2025)</time>
+            </article>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="400">
+            <article class="card-glass">
+              <h4>Universitas Udayana</h4>
+              <time>(2025 - sekarang)</time>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <!-- pengalaman -->
+      <section id="experience" data-aos="fade-up" data-aos-delay="100">
+        <header class="section-header sectionbar">
+          <h2>Pengalaman</h2>
+        </header>
+        <ul class="experience">
+          <li data-aos="fade-up" data-aos-delay="100">
+            <article class="experience_item card-glass">
+              <h4>Kabid Seni dan Kreasi OSIS SMAN 3 Gunungsitoli</h4>
+              <time>2023 - 2024</time>
+            </article>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="200">
+            <article class="experience_item card-glass">
+              <h4>Humas Paskibra SMAN 3 Gunungsitoli</h4>
+              <time>2023 - 2024</time>
+            </article>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="300">
+            <article class="experience_item card-glass">
+              <h4>Peserta FLS2N</h4>
+              <time>2024</time>
+            </article>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="400">
+            <article class="experience_item card-glass">
+              <h4>Desain Grafis Pelatihan CGN Academy</h4>
+              <time>2025</time>
+            </article>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="500">
+            <article class="experience_item card-glass">
+              <h4>Video Editor Pelatihan CGN Academy</h4>
+              <time>2025</time>
+            </article>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="600">
+            <article class="experience_item card-glass">
+              <h4>Magang BEM Kominfo-DKV</h4>
+              <time>2025</time>
+              </article>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="700">
+            <article class="experience_item card-glass">
+              <h4>Juara 1 Digital Poster Hari Guru SMAN 3 Gunungsitoli</h4>
+              <time>2024</time>
+            </article>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="800">
+            <article class="experience_item card-glass">
+              <h4>Harapan 1 Nias Trash Raft Race 2024</h4>
+              <time>2024</time>
+            </article>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="900">
+            <article class="experience_item card-glass">
+              <h4>Harapan 2 Video Pendek SMA</h4>
+              <time>2024</time>
+            </article>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="1000">
+            <article class="experience_item card-glass">
+              <h4>Juara 1 Poster Media Fair UNPAD</h4>
+              <time>2024</time>
+            </article>
+          </li>
+
+        </ul>
+      </section>
+
+      <!-- galeri karya -->
+      <section id="Creative Collection" data-aos="fade-up" data-aos-delay="100">
+        <header class="section-header sectionbar">
+          <h2>Galeri Karya</h2>
+        </header>
+        <div class="portfolio-filter">
+          <button class="filter-btn active" data-filter="all" data-aos="fade-up" data-aos-delay="100">Semua</button>
+          <button class="filter-btn" data-filter="portofolio" data-aos="fade-up" data-aos-delay="150">Portofolio</button>
+          <button class="filter-btn" data-filter="poster" data-aos="fade-up" data-aos-delay="200">Poster</button>
+          <button class="filter-btn" data-filter="saya" data-aos="fade-up" data-aos-delay="250">Saya</button>
+        </div>
+        <div class="portfolio-gallery">
+          <div class="portfolio-item poster" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/images/cha.png" alt="Ilustrasi Vektor" loading="lazy" decoding="async">
+            <div class="portfolio-overlay">
+              <h4>Ilusitrasi Vektor</h4>
+              <p>Poster</p>
+            </div>
+          </div>
+          <div class="portfolio-item poster" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/images/fls.png" alt="FLS2N" loading="lazy" decoding="async">
+            <div class="portfolio-overlay">
+              <h4>Manipulasi Poster</h4>
+              <p>Poster</p>
+            </div>
+          </div>
+          <div class="portfolio-item poster" data-aos="fade-up" data-aos-delay="300">
+            <img src="assets/images/gambar.png" alt="Gambarin Orang" loading="lazy" decoding="async">
+            <div class="portfolio-overlay">
+              <h4>Gambarin Orang</h4>
+              <p>Poster</p>
+            </div>
+          </div>
+          <div class="portfolio-item poster" data-aos="fade-up" data-aos-delay="400">
+            <img src="assets/images/unpad.png" alt="Poster Media Fair UNPAD" loading="lazy" decoding="async">
+            <div class="portfolio-overlay">
+              <h4>Ilustrasi Poster</h4>
+              <p>Poster</p>
+            </div>
+          </div>
+          <div class="portfolio-item portofolio" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/images/1.jpg" alt="Portofolio 1" loading="lazy" decoding="async">
+            <div class="portfolio-overlay">
+              <h4>Portofolio Chalvin</h4>
+              <p>Portofolio</p>
+            </div>
+          </div>
+          <div class="portfolio-item portofolio" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/images/2.jpg" alt="Portofolio 2" loading="lazy" decoding="async">
+            <div class="portfolio-overlay">
+              <h4>Portofolio Chalvin</h4>
+              <p>Portofolio</p>
+            </div>
+          </div>
+          <div class="portfolio-item portofolio" data-aos="fade-up" data-aos-delay="300">
+            <img src="assets/images/3.jpg" alt="Portofolio 3" loading="lazy" decoding="async">
+            <div class="portfolio-overlay">
+              <h4>Portofolio Chalvin</h4>
+              <p>Portofolio</p>
+            </div>
+          </div>
+          <div class="portfolio-item portofolio" data-aos="fade-up" data-aos-delay="400">
+            <img src="assets/images/4.jpg" alt="Portofolio 4" loading="lazy" decoding="async">
+            <div class="portfolio-overlay">
+              <h4>Portofolio Chalvin</h4>
+              <p>Portofolio</p>
+            </div>
+          </div>
+          <div class="portfolio-item portofolio" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/images/6.jpg" alt="Portofolio 6" loading="lazy" decoding="async">
+            <div class="portfolio-overlay">
+              <h4>Portofolio Chalvin</h4>
+              <p>Portofolio</p>
+            </div>
+          </div>
+          <div class="portfolio-item saya" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/images/KOLASE CHALVIN.png" alt="Dokumentasi Chalvin" loading="lazy" decoding="async">
+            <div class="portfolio-overlay">
+              <h4>Dokumentasi Chalvin</h4>
+              <p>Saya</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <p>&copy; 2025 Chalvin Marcellius Lahagu. All rights reserved.</p>
+      <p>
+        <span>Contact:</span>
+        <a href="mailto:chalvin109@gmail.com">chalvin109@gmail.com
+        <a href="tel:082210064095">082210064095</a>
+      </p>
+    </footer>
+
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const text = "Halo Saya Chalvin";
+        const element = document.querySelector('#home h2');
+        let index = 0;
+        function type() {
+          if (index < text.length) {
+            element.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, 100);
+          }
+        }
+        element.textContent = '';
+        type();
+      });
+    </script>
+    <script>
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+      
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+      
+          button.classList.add('active');
+
+          const filterValue = button.getAttribute('data-filter');
+
+          portfolioItems.forEach(item => {
+            if (filterValue === 'all' || item.classList.contains(filterValue)) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    </script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.utils.toArray('.sectionbar, .card-glass, .work-card, .btn-chip').forEach((element, index) => {
+        gsap.fromTo(element,
+          { opacity: 0, y: 50 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: element,
+              start: 'top 80%',
+              end: 'bottom 20%',
+              toggleActions: 'play none none reverse'
+            },
+            delay: index * 0.1
+          }
+        );
+      });
+
+      const canvas = document.createElement('canvas');
+      canvas.style.position = 'fixed';
+      canvas.style.top = '0';
+      canvas.style.left = '0';
+      canvas.style.width = '100%';
+      canvas.style.height = '100%';
+      canvas.style.pointerEvents = 'none';
+      canvas.style.zIndex = '-1';
+      document.body.appendChild(canvas);
+
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const particles = [];
+      const numParticles = 100;
+
+      class Particle {
+        constructor() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.vx = (Math.random() - 0.5) * 2;
+          this.vy = (Math.random() - 0.5) * 2;
+          this.size = Math.random() * 3 + 1;
+          this.color = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.5)`;
+        }
+
+        update() {
+          this.x += this.vx;
+          this.y += this.vy;
+
+          if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+          if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+        }
+
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.fill();
+        }
+      }
+
+      for (let i = 0; i < numParticles; i++) {
+        particles.push(new Particle());
+      }
+
+      function animateParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(particle => {
+          particle.update();
+          particle.draw();
+        });
+        requestAnimationFrame(animateParticles);
+      }
+
+      animateParticles();
+
+      window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
+    </script>
+  </body>
